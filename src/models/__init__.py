@@ -1,0 +1,1 @@
+"""Model interfaces and explainable prediction contracts."""
