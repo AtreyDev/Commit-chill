@@ -18,8 +18,8 @@ into one unified verdict — built for SIH26188.
   including matra/diacritic spacing, rather than relying only on generic Latin-text tampering cues.
 - **Deterministic logic engine** — training-free checksum, date, PAN, and cross-field checks catch
   inconsistencies a purely visual classifier misses.
-- **Tamper-evident audit trail** — every decision is hash-chained (`.docauth/audit.jsonl`) and
-  independently verifiable with `uv run python -m src.audit verify .docauth/audit.jsonl`.
+- **Tamper-evident audit trail** — every decision is hash-chained (`.verilogic/audit.jsonl`) and
+  independently verifiable with `uv run python -m src.audit verify .verilogic/audit.jsonl`.
 - **Honest about limits** — SDGI and tamper scoring are explicitly heuristic/baseline signals until
   trained and validated; they are never the sole basis for a fraud decision.
 

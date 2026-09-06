@@ -42,4 +42,4 @@ uv run --with pytest pytest -q
 uv run streamlit run app.py
 ```
 
-Do not commit `.env`, credentials, uploaded documents, `.docauth/audit.jsonl`, or model weights.
+Do not commit `.env`, credentials, uploaded documents, `.verilogic/audit.jsonl`, or model weights.

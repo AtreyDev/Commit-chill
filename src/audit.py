@@ -20,7 +20,7 @@ def append_audit_record(
     *,
     document_name: str,
     document_path: str | Path | None = None,
-    audit_path: str | Path = ".docauth/audit.jsonl",
+    audit_path: str | Path = ".verilogic/audit.jsonl",
 ) -> dict[str, Any]:
     """Append a report with a previous-hash pointer and return the record."""
     path = Path(audit_path)
@@ -89,7 +89,7 @@ def main() -> None:
     """Verify an audit file from the command line."""
     import argparse
 
-    parser = argparse.ArgumentParser(description="Verify a DocAuth audit chain")
+    parser = argparse.ArgumentParser(description="Verify a VeriLogic audit chain")
     parser.add_argument("command", nargs="?", choices=("verify",), default="verify")
     parser.add_argument("audit_path", type=Path)
     args = parser.parse_args()

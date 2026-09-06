@@ -1,5 +1,5 @@
 """
-DocAuth — AI Document Forgery Detection and Analysis
+VeriLogic — AI Document Forgery Detection and Analysis
 Streamlit multi-tab application.
 
 Run with:
@@ -35,7 +35,7 @@ ALLOWED_IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".tiff", ".bmp"}
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="DocAuth — AI Document Screening",
+    page_title="VeriLogic — AI Document Screening",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -170,7 +170,7 @@ def hero() -> None:
     st.markdown(
         """
         <div class="cc-hero">
-            <h1>🔍 DocAuth — AI Document Screening</h1>
+            <h1>🔍 VeriLogic — AI Document Screening</h1>
             <p>Explainable OCR, MRZ validation, and image-forensics evidence for officer review.</p>
             <div class="cc-chip-row">
                 <span class="cc-chip">🧠 Siamese networks</span>
@@ -260,7 +260,7 @@ def compare_images(img1, img2, label1: str, label2: str) -> None:
 
 def sidebar() -> None:
     with st.sidebar:
-        st.markdown("### 🔍 DocAuth")
+        st.markdown("### 🔍 VeriLogic")
         st.caption("AI-assisted document forensics toolkit")
         st.divider()
         st.markdown("**How to use this tool**")
@@ -876,7 +876,7 @@ with tab4:
                 st.image(evidence_image, caption="Suspicious regions", use_container_width=True)
         with right:
             st.subheader("Audit trail")
-            audit_path = Path(".docauth/audit.jsonl")
+            audit_path = Path(".verilogic/audit.jsonl")
             if st.button("🔗 Verify audit chain", key="verify_audit_chain"):
                 from src.audit import verify_audit_chain
                 verification = verify_audit_chain(audit_path)
@@ -919,6 +919,6 @@ with tab4:
             if len(similar) > 1:
                 st.warning("This document is visually similar to prior submissions; review for duplicate identity data.")
             st.success(f"Recorded decision {audit_record['record_hash'][:16]}…")
-            st.caption("The full record is hash-chained in `.docauth/audit.jsonl`.")
+            st.caption("The full record is hash-chained in `.verilogic/audit.jsonl`.")
     else:
         empty_state("🛡️", "No screening run yet", "Upload a primary identity document above and run the screening")

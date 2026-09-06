@@ -48,7 +48,7 @@ def export_pdf(
     evidence = build_evidence_report(report, document_path=document_path)
     risk = report.get("risk", {})
     lines = [
-        "DocAuth Evidence Report",
+        "VeriLogic Evidence Report",
         f"Document: {evidence['document']['name']}",
         f"SHA-256: {evidence['document']['sha256']}",
         f"Generated: {evidence['generated_at']}",

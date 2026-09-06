@@ -2,7 +2,7 @@
 Dataset loader for offline signature verification.
 
 Supports the directory structure used by the CEDAR dataset and the
-existing DocAuth test data:
+existing VeriLogic test data:
 
     data/
       training/

@@ -24,7 +24,7 @@ Build VeriLogic as an SIH26188 AI-based fake identity and document screening pro
 - Reuse existing modules; avoid unnecessary rewrites.
 - Add focused tests for every new service and run them before broad changes.
 - Do not add a Node/Next.js frontend to the Python root unless a deliberate migration begins in a separate folder.
-- Do not commit generated secrets, `.env`, `.docauth/`, uploads, model weights, or local caches.
+- Do not commit generated secrets, `.env`, `.verilogic/`, uploads, model weights, or local caches.
 
 ## High-value roadmap
 1. Improve GitHub OAuth/API coverage and rate-limit handling.
